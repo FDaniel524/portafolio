@@ -1,0 +1,1407 @@
+.exo-2-<uniquifier> 
+{
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.permanent-marker-regular 
+{
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+/*Configuracion del cuerpo HTML*/
+body
+{
+    /*background: #232323;url('../media/estrellas.jpg');*/
+    color: white;
+    font-family: "Exo 2", sans-serif;
+}
+
+/*E boton que se encargara de comprimir la barra de enlaces en el portafolio en formato de móviles*/
+.menuMoviles
+{
+    display: none;
+}
+
+/*Barra de navegación*/
+.barraSuperior
+{
+    display: flex;
+    justify-content: space-between;;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 80px;
+
+    background: rgba(0,0,0,0.9);
+    border-bottom: 3px gold solid;
+    padding: 20px;
+    z-index: 3;
+}
+
+.barraNav
+{
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Botonera de enlaces a cada sección*/
+button
+{
+    display: flex;
+    color: white;
+    font-size: 22px;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: "Exo 2", sans-serif;
+}
+
+/*Contenedor lateral al cargar la página, se evita la animación inicial*/
+.containerLateralInicial
+{
+    display: flex;
+    flex-flow: wrap column;
+    width: 20%;
+    height: calc(100vh - 81px);
+    position: absolute;
+    border-right: 1px silver solid;
+    top: 81px;
+    left: 0px;
+    background: rgba(3,91,14,0.85);
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.5s linear;
+    z-index: 1;
+}
+
+/*Contenedor lateral al estar oculto*/
+.lateralOcultoInicial
+{
+    display: flex;
+    height: calc(100vh - 81px);
+    position: absolute;
+    top: 81px;
+    left: -600px;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Contenedor lateral (de color verde)*/
+.containerLateral
+{
+    display: flex;
+    flex-flow: wrap column;
+    width: 20%;
+    height: calc(100vh - 81px);
+    position: absolute;
+    border-right: 3px gold solid;
+    top: 81px;
+    left: 0px;
+    background: rgb(3,91,14);
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: entradaLateral 0.5s ease-out;
+    z-index: 2;
+}
+
+/*Contenedor lateral al estar oculto*/
+.lateralOculto
+{
+    display: flex;
+    height: calc(100vh - 81px);
+    position: absolute;
+    /*left: -600px;*/
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Contenedor central inical para omitir la animacion*/
+.containerCentralInicial
+{
+    display: flex;
+    flex-flow: wrap column;
+    height: calc(100vh - 90px);
+    width: calc(80vw - 10px);
+
+    position: absolute;
+    top: 81px;
+    left: calc(20vw + 3px);
+    background: rgb(255,255,255);
+    color: black;
+    
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    z-index:1;
+}
+
+/*Contenedor central (color blanco)*/
+.containerCentral
+{
+    display: flex;
+    flex-flow: wrap column;
+    height: calc(100vh - 90px);
+    width: calc(80vw - 10px);
+    
+    position: absolute;
+    top: 81px;
+    left: calc(20vw + 3px);
+    background: rgb(255,255,255);
+    color: black;
+    
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    animation: entradaCentral 0.5s ease-out;
+    z-index:2;
+}
+
+/*Contenedor central al estar oculto*/
+.centralOculto
+{
+    display: flex;
+    height: calc(100vh - 81px);
+    position: absolute;
+    left: -1200px;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@keyframes entradaLateral
+{
+    0%
+    {
+        left: -600px;
+    }
+    100%
+    {
+        left: 0px;
+    }
+}
+
+@keyframes entradaCentral
+{
+    0%
+    {
+        right: -5000px;
+    }
+    100%
+    {
+        right: 0px;
+    }
+}
+
+/*Estilos de la sección de presentación*/
+.containerFotoPersonal
+{
+    display: flex;
+    width: 260px;
+    height: 260px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-image: conic-gradient(white 30deg, gold 90deg, green 150deg, white 210deg, gold 270deg, green 330deg, white 360deg);
+}
+
+.fotoPersonal
+{
+    border-radius: 100%;
+    width: 250px;
+    height: auto;
+}
+
+h1
+{
+    font-size: 40px;
+}
+
+h2
+{
+    font-size: 24px;
+}
+
+p
+{
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 10px 10px;
+}
+
+/*Seccion de Skills*/
+.containerSkills
+{
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: space-between;
+    margin: auto;
+    animation: desplazar 3s linear infinite;
+}
+
+@keyframes desplazar
+{
+    0%, 50%, 100%{transform: translate(0px,0px);}
+    25%{transform: translate(0px,10px);}
+    75%{transform: translate(0px,-10px);}
+}
+
+/*Daremos delays para que los iconos no sigan el mismo patron de movimiento*/
+.containerSkills:nth-child(2) {animation-delay: 0.1s;}
+.containerSkills:nth-child(3) {animation-delay: 0.3s;}
+.containerSkills:nth-child(4) {animation-delay: 0.5s;}
+.containerSkills:nth-child(5) {animation-delay: 0.7s;}
+.containerSkills:nth-child(6) {animation-delay: 0.8s;}
+.containerSkills:nth-child(7) {animation-delay: 0.6s;}
+.containerSkills:nth-child(8) {animation-delay: 0.4s;}
+.containerSkills:nth-child(9) {animation-delay: 0.2s;}
+
+.imagenesSkills
+{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+h3
+{
+    font-size: 20px;
+    font-family: "Permanent Marker", cursive;
+}
+
+/*Sección de Hobbies*/
+.containerHobbies
+{
+    display: flex;
+    flex-flow: wrap row;
+    margin: auto;
+    width: 90%;
+    max-width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hobbiesTextoImg
+{
+    width: 30%;
+    height: 230px;
+    display: flex;
+    flex-flow: wrap column;
+    margin: 10px auto;
+    border: 2px gold solid;
+    border-radius: 5px;
+    justify-content: space-around;
+    transition: all 0.3s linear;
+}
+
+.hobbiesTextoImg:hover
+{
+    background: rgba(3,91,14,0.9);
+    color: white;
+}
+
+.hobbiesGif
+{
+    width: 170px;
+    height: 170px;
+    margin: 0 auto;
+}
+
+/*Seccion de Formación*/
+.containerFormacion
+{
+    display: flex;
+    flex-flow: wrap row;
+    margin: auto;
+    width: 95%;
+    max-width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formacionTextoImg
+{
+    width: 48%;
+    height: 230px;
+    display: flex;
+    flex-direction:row;
+    margin: 10px auto;
+    border: 2px gold solid;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s linear;
+}
+
+.formacionTextoImg:hover
+{
+    border: 10px gold groove;
+}
+
+.imagenesFormacion
+{
+    height: 200px;
+    width: 200px;
+    margin-left: 5px;
+}
+
+/*El contenedor y la Img de Alura y Oracle necesita un redimensionamiento especial*/
+#aluraoracleContainer
+{
+    width: 80%;
+}
+
+.aluraoracleImg
+{
+    width: 60%;
+    height: auto;
+}
+
+/*Seccion de Proyectos*/
+.containerProyectos
+{
+    display: flex;
+    flex-flow: wrap row;
+    margin: auto;
+    width: 90%;
+    max-width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.proyectosTextoImg
+{
+    width: 30%;
+    height: 230px;
+    display: flex;
+    flex-flow: wrap column;
+    margin: 10px auto;
+    border: 2px gold solid;
+    border-radius: 5px;
+    justify-content: space-around;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    z-index: 1;
+    transition: all 0.5s ease-out;
+}
+
+.proyectosTextoImg:hover img
+{
+    scale: 0.85;
+}
+
+.proyectosTextoImg:hover
+{
+    background: rgba(3,91,14,0.9);
+    border-radius: 100% 100% 0 0;
+    color: white;
+}
+
+/*Seccion de contacto*/
+#central6
+{
+    padding: 10px 0;
+}
+.containerContacto
+{
+    display: flex;
+    flex-flow: row wrap;
+    width: 94%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.opcionesContacto
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 24%;
+    border-left: 2px gold solid;
+    border-right: 2px gold solid;
+    padding: 10px 5px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.imagenesContacto
+{
+    width: 64px;
+    height: 64px;
+    margin: 10px auto;
+    filter: grayscale(100%);
+    transition: all 0.3s linear;
+}
+
+.opcionesContacto:hover
+{
+    background: rgba(212, 175, 55, 0.7);
+}
+
+.opcionesContacto:hover .imagenesContacto
+{
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+form
+{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    justify-content: center;
+}
+
+.tituloFormulario
+{
+    display: flex;
+    width: 100%;
+    background: gold;
+    padding: 10px 15px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.celdaFormulario
+{
+    display: flex;
+    height: 100%;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    width:50%;
+    padding: 20px 5px;
+    gap: 30px;
+}
+
+input[type='text']
+{
+    display: flex;
+    width: 94%;
+    padding: 5px;
+    margin: auto;
+    border: none;
+    border-bottom: 2px gold solid;
+    font-size: 18px;
+    outline: none;
+    z-index: 1;
+}
+
+.labelForm
+{
+    position: absolute;
+    left: 5%;
+    display: flex;
+    z-index: 2;
+    font-size: 18px;
+    color: gray;
+    transition: all 0.3s ease-in;
+}
+
+/*Label de nombre*/
+.labelForm:nth-child(1) 
+{
+    top: 14%;
+}
+
+.labelForm:nth-child(2) 
+{
+    top: 46%;
+}
+
+.labelForm:nth-child(3) 
+{
+    top: 78%;
+}
+
+textarea
+{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    border: none;
+    border-left: 2px gold solid;
+    border-right: 2px gold solid;
+    resize: none;
+    outline: none;
+}
+
+.botonForm
+{
+    display: flex;
+    font-size: 20px;
+    border-radius: 8px;
+    background: rgba(3,91,14,0.85);;
+    color: white;
+    width: 15%;
+    justify-content: center;
+    transition: all 0.2s linear;
+}
+
+.botonForm:hover
+{
+    transform: scale(1.05);
+}
+
+/*SECCION RESPONSIVE MOVILES*/
+@media (max-width: 480px)
+{
+    /*Barra de navegación*/
+    .barraSuperior
+    {
+        padding: 10px;
+    }
+    /*Se modifica el tamaño del titulo*/
+    #creador
+    {
+        font-size: 16px;
+    }
+    
+    /*Boton que despliega la barra de navegacion del portafolio*/
+    .menuMoviles
+    {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        width: 50px;
+        height: 50px;
+        border: gold solid 2px;
+        border-radius: 4px;
+    }
+    /*barras decorativas del boton de moviles*/
+    .menuMoviles div
+    {
+        display: flex;
+        width: 90%;
+        border: 2px gold solid;
+        margin: 0 auto;
+    }
+    /*Barra de navegacion oculta en este modo*/
+    .barraNav
+    {
+        position: absolute;
+        top: -280px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 3;
+    }
+    /*Barra de navegación visible en este modo*/
+    .barraNavVisible
+    {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 3;
+    }
+    /*Botonera de enlaces a cada sección*/
+    button
+    {
+        font-size: 22px;
+        font-family: "Exo 2", sans-serif;
+        justify-content: center;
+    }
+    /*Contenedor lateral al cargar la página, se evita la animación inicial*/
+    .containerLateralInicial
+    {
+        display: flex;
+        width: 100%;
+        height: auto;
+        position: static;
+        border-bottom: 1px silver solid;
+        z-index: 1;
+    }
+    /*Contenedor lateral (de color verde)*/
+    .containerLateral
+    {
+        width: 100%;
+        height: auto;
+        position: static;
+        border-bottom: 3px gold solid;
+        border-right: none;
+    }
+    /*Contenedor lateral al estar oculto*/
+    .lateralOculto
+    {
+        display: flex;
+        height: auto;
+        position: absolute;
+        left: -600px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    /*Contenedor central inical para omitir la animacion*/
+    .containerCentralInicial
+    {
+        display: flex;
+        height: auto;
+        width: 100%;   
+        position: static;
+    }
+    /*Contenedor central (color blanco)*/
+    .containerCentral
+    {
+        height: auto;
+        width: 100%;
+        position: static;
+    }
+    
+    /*Contenedor central al estar oculto*/
+    .centralOculto
+    {
+        display: flex;
+        height: calc(100vh - 81px);
+        position: absolute;
+        left: -800px;
+    }
+    h1
+    {
+        font-size: 32px;
+        margin: 10px auto;
+    }
+    
+    h2
+    {
+        font-size: 20px;
+        margin: 10px auto;
+    }
+    
+    p
+    {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 15px 10px;
+    }
+    /*Seccion de Skills*/
+    /*Aqui es necesario modificar con el id la direccion del flex*/
+    #central2
+    {
+        flex-direction: row;
+    }
+    /*Contenedor de las imagenes de skill con su titulo*/
+    .containerSkills
+    {
+        display: flex;
+        flex-flow: column;
+        margin: 10px auto;
+        animation: none;
+    }
+    .imagenesSkills
+    {
+        width: 130px;
+        height: 130px;
+    }
+    /*Seccion de Hobbies*/
+    .containerHobbies
+    {
+        flex-flow: wrap row;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .hobbiesTextoImg
+    {
+        width: 43%;
+        height: 230px;
+        display: flex;
+        flex-flow: wrap column;
+    }
+    .hobbiesGif
+    {
+        width: 40vw;
+        height: auto;
+        margin: 0 auto;
+    }
+    /*Seccion de Formación*/
+    .containerFormacion
+    {
+        flex-flow: wrap column;
+        margin: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .formacionTextoImg
+    {
+        width: 98%;
+        height: auto;
+        display: flex;
+        flex-direction:column;
+    }
+    
+    /*El contenedor y la Img de Alura y Oracle necesita un redimensionamiento especial*/
+    #aluraoracleContainer
+    {
+        width: 98%;
+    }
+    
+    .aluraoracleImg
+    {
+        width: 90%;
+    }
+    
+    /*Seccion de Proyectos*/
+    .containerProyectos
+    {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .proyectosTextoImg
+    {
+        width: 48%;
+        height: 230px;
+    }
+    
+    /*Seccion de contacto*/
+    .containerContacto
+    {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        margin-bottom: 20px;
+        justify-content: space-around;
+    }
+
+    h3
+    {
+        font-size: 14px;
+        font-family: "Permanent Marker", cursive;
+    }
+    
+    .opcionesContacto
+    {
+        display: flex;
+        flex-directio: column;
+        word-wrap: break-word;
+        justify-content: center;
+        width: 24%;
+    }
+    
+    .imagenesContacto
+    {
+        width: 64px;
+        height: 64px;
+        margin: 10px auto;
+    }
+
+
+    .tituloFormulario
+    {
+        padding: 10px 5px;
+    }
+    
+    .celdaFormulario
+    {
+        height: auto;
+        position: relative;
+        flex-direction: column;
+        justify-content: space-around;
+        width:100%;
+        padding: 20px 5px;
+    }
+    
+    .botonForm
+    {
+        font-size: 16px;
+        width: 20%;
+    }
+}
+
+/*SECCION RESPONSIVE TABLETAS*/
+@media (max-width: 768px)
+{
+    /*Se modifica el tamaño del titulo*/
+    #creador
+    {
+        font-size: calc(1vw + 16px);
+    }
+    
+    /*Boton que despliega la barra de navegacion del portafolio*/
+    .menuMoviles
+    {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        width: 50px;
+        height: 50px;
+        border: gold solid 2px;
+        border-radius: 4px;
+    }
+    /*barras decorativas del boton de moviles*/
+    .menuMoviles div
+    {
+        display: flex;
+        width: 90%;
+        border: 2px gold solid;
+        margin: 0 auto;
+    }
+    /*Barra de navegacion oculta en este modo*/
+    .barraNav
+    {
+        position: absolute;
+        top: -300px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 3;
+    }
+    /*Barra de navegación visible en este modo*/
+    .barraNavVisible
+    {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 3;
+    }
+    /*Botonera de enlaces a cada sección*/
+    button
+    {
+        font-size: calc(1vw + 20px);
+        justify-content: center;
+    }
+    /*Contenedor lateral al cargar la página, se evita la animación inicial*/
+    .containerLateralInicial
+    {
+        display: flex;
+        width: 100%;
+        height: auto;
+        position: static;
+        border-bottom: 1px silver solid;
+        z-index: 1;
+    }
+    /*Contenedor lateral (de color verde)*/
+    .containerLateral
+    {
+        width: 100%;
+        height: auto;
+        position: static;
+        border-bottom: 3px gold solid;
+        border-right: none;
+    }
+    /*Contenedor lateral al estar oculto*/
+    .lateralOculto
+    {
+        display: flex;
+        height: auto;
+        position: absolute;
+        left: -800px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .lateralOcultoInicial
+    {
+        left: -800px;
+    }
+    /*Contenedor central inical para omitir la animacion*/
+    .containerCentralInicial
+    {
+        display: flex;
+        height: auto;
+        width: 100%;   
+        position: static;
+    }
+    /*Contenedor central (color blanco)*/
+    .containerCentral
+    {
+        height: auto;
+        width: 100%;
+        position: static;
+    }
+    
+    /*Contenedor central al estar oculto*/
+    .centralOculto
+    {
+        display: flex;
+        height: auto;
+        position: absolute;
+        left: -1000px;
+    }
+    h1
+    {
+        font-size: calc(1vw + 30px);
+        margin: 10px auto;
+    }
+    
+    h2
+    {
+        font-size: calc(1vw + 18px);
+        margin: 10px auto;
+    }
+    
+    p
+    {
+        font-size: calc(1vw + 12px);
+        line-height: 1.5;
+        margin: 15px 10px;
+    }
+    /*Seccion de Skills*/
+    /*Aqui es necesario modificar con el id la direccion del flex*/
+    #central2
+    {
+        flex-direction: row;
+    }
+    /*Contenedor de las imagenes de skill con su titulo*/
+    .containerSkills
+    {
+        display: flex;
+        flex-flow: column;
+        margin: 10px auto;
+        animation: none;
+    }
+    .imagenesSkills
+    {
+        width: 130px;
+        height: 130px;
+    }
+    /*Seccion de Hobbies*/
+    .containerHobbies
+    {
+        flex-flow: wrap row;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .hobbiesTextoImg
+    {
+        width: 48%;
+        height: 350px;
+        display: flex;
+        flex-flow: nowrap column;
+    }
+    .hobbiesGif
+    {
+        width: 40vw;
+        height: auto;
+        margin: 0 auto;
+    }
+    /*Seccion de Formación*/
+    .containerFormacion
+    {
+        flex-flow: wrap column;
+        margin: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .formacionTextoImg
+    {
+        width: 98%;
+        height: auto;
+        display: flex;
+        flex-direction:column;
+    }
+    
+    /*El contenedor y la Img de Alura y Oracle necesita un redimensionamiento especial*/
+    #aluraoracleContainer
+    {
+        width: 98%;
+    }
+    
+    .aluraoracleImg
+    {
+        width: 90%;
+    }
+    
+    /*Seccion de Proyectos*/
+    .containerProyectos
+    {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .proyectosTextoImg
+    {
+        width: 48%;
+        height: 350px;
+        flex-flow: nowrap column;
+    }
+    
+    /*Seccion de contacto*/
+    .containerContacto
+    {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        margin-bottom: 20px;
+        justify-content: space-around;
+    }
+
+    h3
+    {
+        font-size: calc(1vw + 12px);
+        font-family: "Permanent Marker", cursive;
+    }
+    
+    .opcionesContacto
+    {
+        display: flex;
+        flex-directio: column;
+        word-wrap: break-word;
+        justify-content: center;
+        width: 24%;
+    }
+    
+    .imagenesContacto
+    {
+        width: 64px;
+        height: 64px;
+        margin: 10px auto;
+    }
+
+
+    .tituloFormulario
+    {
+        padding: 10px 5px;
+    }
+    
+    .celdaFormulario
+    {
+        height: auto;
+        position: relative;
+        flex-direction: column;
+        justify-content: space-around;
+        width:100%;
+        padding: 20px 5px;
+    }
+    
+    .botonForm
+    {
+        font-size: 16px;
+        width: 20%;
+    }
+}
+
+@media (max-width: 1024px)
+{
+    *Se modifica el tamaño del titulo*/
+    #creador
+    {
+        font-size: calc(1vw + 16px);
+    }
+    
+    /*Boton que despliega la barra de navegacion del portafolio*/
+    .menuMoviles
+    {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        width: 50px;
+        height: 50px;
+        border: gold solid 2px;
+        border-radius: 4px;
+    }
+    /*barras decorativas del boton de moviles*/
+    .menuMoviles div
+    {
+        display: flex;
+        width: 90%;
+        border: 2px gold solid;
+        margin: 0 auto;
+    }
+    /*Barra de navegacion oculta en este modo*/
+    .barraNav
+    {
+        position: absolute;
+        top: -300px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 3;
+    }
+    /*Barra de navegación visible en este modo*/
+    .barraNavVisible
+    {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 3;
+    }
+    /*Botonera de enlaces a cada sección*/
+    button
+    {
+        font-size: calc(1vw + 20px);
+        justify-content: center;
+    }
+    /*Contenedor lateral al cargar la página, se evita la animación inicial*/
+    .containerLateralInicial
+    {
+        display: flex;
+        width: 100%;
+        height: auto;
+        position: static;
+        border-bottom: 1px silver solid;
+        z-index: 1;
+    }
+    /*Contenedor lateral (de color verde)*/
+    .containerLateral
+    {
+        width: 100%;
+        height: auto;
+        position: static;
+        border-bottom: 3px gold solid;
+        border-right: none;
+    }
+    /*Contenedor lateral al estar oculto*/
+    .lateralOculto
+    {
+        display: flex;
+        height: auto;
+        position: absolute;
+        left: -800px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .lateralOcultoInicial
+    {
+        left: -800px;
+    }
+    /*Contenedor central inical para omitir la animacion*/
+    .containerCentralInicial
+    {
+        display: flex;
+        height: auto;
+        width: 100%;   
+        position: static;
+    }
+    /*Contenedor central (color blanco)*/
+    .containerCentral
+    {
+        height: auto;
+        width: 100%;
+        position: static;
+    }
+    
+    /*Contenedor central al estar oculto*/
+    .centralOculto
+    {
+        display: flex;
+        height: auto;
+        position: absolute;
+        left: -1000px;
+    }
+    h1
+    {
+        font-size: calc(1vw + 30px);
+        margin: 10px auto;
+    }
+    
+    h2
+    {
+        font-size: calc(1vw + 18px);
+        margin: 10px auto;
+    }
+    
+    p
+    {
+        font-size: calc(1vw + 12px);
+        line-height: 1.5;
+        margin: 15px 10px;
+    }
+    /*Seccion de Skills*/
+    /*Aqui es necesario modificar con el id la direccion del flex*/
+    #central2
+    {
+        flex-direction: row;
+    }
+    /*Contenedor de las imagenes de skill con su titulo*/
+    .containerSkills
+    {
+        display: flex;
+        flex-flow: column;
+        margin: 10px auto;
+        animation: none;
+    }
+    .imagenesSkills
+    {
+        width: 130px;
+        height: 130px;
+    }
+    /*Seccion de Hobbies*/
+    .containerHobbies
+    {
+        flex-flow: wrap row;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .hobbiesTextoImg
+    {
+        width: 48%;
+        height: 350px;
+        display: flex;
+        flex-flow: nowrap column;
+    }
+    .hobbiesGif
+    {
+        width: 40vw;
+        height: auto;
+        margin: 0 auto;
+    }
+    /*Seccion de Formación*/
+    .containerFormacion
+    {
+        flex-flow: wrap column;
+        margin: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .formacionTextoImg
+    {
+        width: 98%;
+        height: auto;
+        display: flex;
+        flex-direction:column;
+    }
+    
+    /*El contenedor y la Img de Alura y Oracle necesita un redimensionamiento especial*/
+    #aluraoracleContainer
+    {
+        width: 98%;
+    }
+    
+    .aluraoracleImg
+    {
+        width: 90%;
+    }
+    
+    /*Seccion de Proyectos*/
+    .containerProyectos
+    {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .proyectosTextoImg
+    {
+        width: 48%;
+        height: 350px;
+        flex-flow: nowrap column;
+    }
+    
+    /*Seccion de contacto*/
+    .containerContacto
+    {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        margin-bottom: 20px;
+        justify-content: space-around;
+    }
+
+    h3
+    {
+        font-size: calc(1vw + 12px);
+        font-family: "Permanent Marker", cursive;
+    }
+    
+    .opcionesContacto
+    {
+        display: flex;
+        flex-directio: column;
+        word-wrap: break-word;
+        justify-content: center;
+        width: 24%;
+    }
+    
+    .imagenesContacto
+    {
+        width: 64px;
+        height: 64px;
+        margin: 10px auto;
+    }
+
+
+    .tituloFormulario
+    {
+        padding: 10px 5px;
+    }
+    
+    .celdaFormulario
+    {
+        height: auto;
+        position: relative;
+        flex-direction: column;
+        justify-content: space-around;
+        width:100%;
+        padding: 20px 5px;
+    }
+    
+    .botonForm
+    {
+        font-size: 16px;
+        width: 20%;
+    }
+}
+
+@media (max-width: 1200px)
+{
+    /*Barra de navegacion oculta en este modo*/
+    .barraNav
+    {
+        display: flex;
+        flex-flow: row wrap;
+        width: 60%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /*Botonera de enlaces a cada sección*/
+    button
+    {
+        font-size: calc(1vw + 12px);
+    }
+}
