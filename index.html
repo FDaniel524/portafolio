@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Fernando Daniel Martínez Sánchez</title>
+
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/stylo.css">
+
+        <script type="text/javascript" src="js/app.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Tilt+Neon&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="barraSuperior">
+                <h2 id="creador">Ing. Fernando Martínez Sánchez</h2>
+                <button onclick="activadorNav()" id="menuMoviles" class="menuMoviles">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <nav class="barraNav" id="barraNav">
+                    <button onclick="container(1)" id="botonNav1" disabled>Sobre mí</button>
+                    <button onclick="container(2)" id="botonNav2">Skills</button>
+                    <button onclick="container(3)" id="botonNav3">Hobbies</button>
+                    <button onclick="container(4)" id="botonNav4">Formación</button>
+                    <button onclick="container(5)" id="botonNav5">Proyectos</button>
+                    <button onclick="container(6)" id="botonNav6">Contacto</button>
+                </nav>
+            </div>
+        </header>
+        <main>
+                <div class="containerLateralInicial" id="lateral1">
+                    <h2>Sobre mí</h2>
+                    <p>Soy una persona que gusta de ayudar a los demás, adentrarse en la innovación y la mejora continua.
+                    Considero importante el aprendizaje continuo. <br><br> Me definen mis valores, mi constancia y mi gusto por aprender cosas nuevas.</p>      
+                </div>
+                <div class="containerCentralInicial" id="central1">
+                    <div class="containerFotoPersonal">
+                        <img src="media/foto.jpeg" class="fotoPersonal">
+                    </div>
+                    <h1>Hola!</h1>
+                    <h1>Soy Fernando Daniel Martínez Sánchez</h1>
+                    <h2>Soy Ingeniero en Comunicaciones y Electrónica con especialidad en el área de computación, espero sea de agrado tu visita ;)</h2>
+                    <br>
+                </div>
+
+                <div class="lateralOculto" id="lateral2">
+                    <h2>Skills</h2>
+                    <p>Cuento con conocimientos de FrontEnd en tecnologías como HTML, CSS y JavaScript donde siempre procuro priorizar la experiencia del usuario.</p>
+                    <p>Respecto a BackEnd, cuento con conocimientos sobre todo de lógica programacional en lenguaes de C++ y sus derivados, asímismo como Python.</p>
+                </div>
+                <div class="centralOculto" id="central2">
+                    <div class="containerSkills">
+                        <img src="media/skills/HTML5.PNG" class="imagenesSkills">
+                        <h3>HTML 5</h3>
+                    </div>
+                    <div class="containerSkills">
+                        <img src="media/skills/CSS3.PNG" class="imagenesSkills">
+                        <h3>CSS 3</h3>
+                    </div>
+                    <div class="containerSkills">
+                        <img src="media/skills/JAVASCRIPT 7.PNG" class="imagenesSkills">
+                        <h3>JavaScript 7</h3>
+                    </div>
+                    <div class="containerSkills">
+                        <img src="media/skills/PHP.PNG" class="imagenesSkills">
+                        <h3>PHP</h3>
+                    </div>
+                    <div class="containerSkills">
+                        <img src="media/skills/MySQL.PNG" class="imagenesSkills">
+                        <h3>MySQL</h3>
+                    </div>
+                    <div class="containerSkills">
+                        <img src="media/skills/PYTHON.PNG" class="imagenesSkills">
+                        <h3>Python</h3>
+                    </div>
+                    <div class="containerSkills">
+                        <img src="media/skills/Cplusplus.PNG" class="imagenesSkills">
+                        <h3>C++</h3>
+                    </div>
+                    <div class="containerSkills">
+                        <img src="media/skills/C.PNG" class="imagenesSkills">
+                        <h3>C#</h3>
+                    </div>
+                    <div class="containerSkills">
+                        <img src="media/skills/BOOTSTRAP.PNG" class="imagenesSkills">
+                        <h3>Bootstrap</h3>
+                    </div>
+                </div>
+
+                <div class="lateralOcultoInicial" id="lateral3">
+                    <h2>Hobbies</h2>
+                    <p>Soy consciente de la importancia de mantener actividades recreativas que apoyen al bienestar, aquí te presento algunas de mis favoritas</p>
+                    <p>Como puedes ver, sobre todo me gusta la música, la cuál considero una medicina que puede empatar con cualquier emoción.</p>
+                </div>
+                <div class="centralOculto" id="central3">
+                    <div class="containerHobbies">
+                        <div class="hobbiesTextoImg">
+                            <h3>Videojuegos</h3>
+                            <img src="media/hobbies/videogames.gif" class="hobbiesGif">
+                        </div>
+                        <div class="hobbiesTextoImg">
+                            <h3>Tocar Guitarra</h3>
+                            <img src="media/hobbies/guitarra.gif" class="hobbiesGif">
+                        </div>
+                        <div class="hobbiesTextoImg">
+                            <h3>Caminar / explorar</h3>
+                            <img src="media/hobbies/pasear.gif" class="hobbiesGif">
+                        </div>
+                        <div class="hobbiesTextoImg">
+                            <h3>Escuchar música</h3>
+                            <img src="media/hobbies/musica.gif" class="hobbiesGif">
+                        </div>
+                        <div class="hobbiesTextoImg">
+                            <h3>Ejercicio de fuerza</h3>
+                            <img src="media/hobbies/ejercicio.gif" class="hobbiesGif">
+                        </div>
+                        <div class="hobbiesTextoImg">
+                            <h3>Leer</h3>
+                            <img src="media/hobbies/leer.gif" class="hobbiesGif">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lateralOcultoInicial" id="lateral4">
+                    <h2>Formación</h2>
+                    <p>Egresé de la Ingeniería en Comunicaciones y Electrónica en la ESIME-IPN, donde por un año me especialicé en computación y me enfoqué en desarrollo web.</p>
+                    <p>Estudié inglés en el Centro de Lenguas Extranjeras del IPN por lo que, cuanto con conocimientos del idioma.</p>
+                    <p>Actualmente, me encuentro estudiando el programa ONE que brindan Oracle y Alura.</p>
+                </div>
+                <div class="centralOculto" id="central4">
+                    <div class="containerFormacion">
+                        <div class="formacionTextoImg">
+                            <img src="media/formacion/esime.jpg" class="imagenesFormacion">
+                            <p>Escuela Superior de Ingeniería Mecánica y Eléctrica - Unidad Zacatenco</p>
+                        </div>
+                        <div class="formacionTextoImg">
+                            <img src="media/formacion/cenlex.png" class="imagenesFormacion">
+                            <p>CENLEX Zacatenco, se imparten idiomas desde Inglés, Francés, Nahuatl hasta lengua de señas.</p>
+                        </div>
+                        <div class="formacionTextoImg" id="aluraoracleContainer">
+                            <img src="media/formacion/aluraoracle.png" class="aluraoracleImg">
+                            <p>El programa Oracle Next Education, a través de la Plataforma Alura me ha permitido adquirir conocimientos de FrontEnd que puedo aplicar en la empleabilidad.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lateralOcultoInicial" id="lateral5">
+                    <h2>Proyectos</h2>
+                    <p>Los proyectos aquí presentes son una muestra de mi trabajo, la experiencia y los aprendizajes adquiridos.</p>
+                    <p>Colores Mágicos y Advanced Air Solutions son actualmente páginas funcionales que desarrollé para los particulares.</p>
+                </div>
+                <div class="centralOculto" id="central5">
+                    <div class="containerProyectos">
+                        <div class="proyectosTextoImg" onclick="window.open('https://advanced-technichal-system.online/', '_blank');">
+                            <img src="media/proyectos/advanced.png" class="hobbiesGif">
+                            <h3>Advanced Air Solutions</h3>
+                        </div>
+                        <div class="proyectosTextoImg" onclick="window.open('https://magiccolorsmty.000webhostapp.com/', '_blank');">
+                            <img src="media/proyectos/coloresmagicos.png" class="hobbiesGif">
+                            <h3>Colores Mágicos</h3>
+                        </div>
+                        <div class="proyectosTextoImg" onclick="window.open('https://fdaniel524.github.io/Encriptador-Alura/', '_blank');">
+                            <img src="media/proyectos/encriptador.png" class="hobbiesGif">
+                            <h3>Encriptador Alura</h3>
+                        </div>
+                        <div class="proyectosTextoImg" onclick="window.open('https://fdaniel524.github.io/Disneyprac/', '_blank');">
+                            <img src="media/proyectos/disney.png" class="hobbiesGif">
+                            <h3>Disney+</h3>
+                        </div>
+                        <div class="proyectosTextoImg" onclick="window.open('https://fdaniel524.github.io/tablaperiodica/#resumen/', '_blank');">
+                            <img src="media/proyectos/tablaperiodica.png" class="hobbiesGif">
+                            <h3>Tabla Periódica</h3>
+                        </div>
+                        <div class="proyectosTextoImg" onclick="window.open('https://fdaniel524.github.io/animacionescss/', '_blank');">
+                            <img src="media/skills/CSS3.PNG" class="hobbiesGif">
+                            <h3>Animaciones de carga CSS</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lateralOcultoInicial" id="lateral6">
+                    <h2>Contacto</h2>
+                    <p>Ha sido un verdadero placer recibir tu visita, espero saber de ti muy pronto y por ello te brindo mis opciones de contacto.</p>
+                    <p>Hasta pronto!</p>
+                </div>
+                <div class="centralOculto" id="central6">
+                    <div class="containerContacto">
+                        <div class="opcionesContacto" onclick="window.open('https://github.com/FDaniel524', '_blank');">
+                            <h3>Github</h3>
+                            <img src="media/contacto/github.png" class="imagenesContacto">
+                        </div>
+                        <div class="opcionesContacto" onclick="window.open('https://www.linkedin.com/in/fernando-s%C3%A1nchez-b86186272/', '_blank');">
+                            <h3>Linkedin</h3>
+                            <img src="media/contacto/linkedin.png" class="imagenesContacto">
+                        </div>
+                        <div class="opcionesContacto" onclick="window.open('https://wa.me/5572881324', '_blank');">
+                            <h3>Whatsapp</h3>
+                            <img src="media/contacto/whatsapp.png" class="imagenesContacto">
+                        </div>
+                        <div class="opcionesContacto" onclick="window.open('media/contacto/CV23.pdf', '_blank');">
+                            <h3>Curriculo</h3>
+                            <img src="media/contacto/pdf.png" class="imagenesContacto">
+                        </div>
+                    </div>
+                    <form action="enviomail.php" method="post">
+                    <div class="containerContacto" id="formularioContacto">
+                        <div class="tituloFormulario">
+                            <h2>Formulario de Contacto</h2>
+                            <button class="botonForm" type="submit" name="enviar">Enviar</button>
+                        </div>
+                            <div class="celdaFormulario">
+                                <label class="labelForm" id="label1" for="nombre">Nombre</label>
+                                <label class="labelForm" id="label2" for="email">E-mail</label>
+                                <label class="labelForm" id="label3" for="asunto">Asunto</label>
+                                
+                                <input type="text" name="nombre" id="nombre" onfocus="entradaInput('label1', '5%')" onfocusout="salidaInput('label1', '14%', 'nombre')" required>
+                                <input type="text" name="email" id="email" onfocus="entradaInput('label2', '37%')" onfocusout="salidaInput('label2', '46%', 'email')" required>
+                                <input type="text" name="asunto" id="asunto" onfocus="entradaInput('label3', '69%')" onfocusout="salidaInput('label3', '78%', 'asunto')"  required>
+                            </div>
+                            <textarea class="celdaFormulario" placeholder="Mensaje" name="mensaje"></textarea>
+                    </div>
+                    </form>
+                </div>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
